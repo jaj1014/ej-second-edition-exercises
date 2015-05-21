@@ -46,3 +46,24 @@ for(var i = 1; i <= 100; i++) {
     console.log(result || n);
 }
  
+//Chapter 2 - Exercise 3 - Chess Board////////////////////////////////////////////////////
+
+//Initialize the board variable so we have somewhere to store the string we're creating
+var board = "";
+//This is to control the size such that this value equals the length and number of lines
+var size = 20;
+
+//Outer loop controls the height by adding "\n" after each line loop runs
+for(var a = 0; a < size; a++) {
+ //Inner loop generates lines
+  for(var b = 0; b < size; b++) {
+    //If a + b is divisible by 2 it prints " ", otherwise prints "#"
+    if((a + b) % 2 == 0)
+      board += " ";
+    else
+      board += "#";
+  }
+  board += "\n";
+}
+//Console.log the board string created above
+console.log(board);
